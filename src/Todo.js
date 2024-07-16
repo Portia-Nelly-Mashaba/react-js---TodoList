@@ -27,6 +27,15 @@ function Todo() {
         //store to local storage
         localStorage.setItem('todolist', JSON.stringify(updatedTodoArr))
     }
+
+    const handleDeleteTodo = (index)=>{
+        let reducedTodo = [...allTodos];
+        reducedTodo.splice(index, 1);
+
+        localStorage.setItem('todolist', JSON.stringify(reducedTodo));
+        setAllToDos(reducedTodo)
+    }
+
      useEffect(()=>{
         try {
             let savedTodo = JSON.parse(localStorage.getItem('todolist'));
@@ -87,8 +96,8 @@ function Todo() {
                                 </div>
                                 <div className='icon'>
                                     <FaCircle className='priority-icon' style={{ color: priorityColor }} />
-                                    <BiEditAlt className='edit-icon' title="Edit?" />
-                                    <AiOutlineDelete className='delete-icon' title="Delete?" />
+                                    <BiEditAlt className='edit-icon' onClick={''} title="Edit?" />
+                                    <AiOutlineDelete className='delete-icon' onClick={()=>handleDeleteTodo(index)} title="Delete?" />
                                     <FaCheck className='check-icon' title="Complete?" />
                                 </div>
                             </div>
