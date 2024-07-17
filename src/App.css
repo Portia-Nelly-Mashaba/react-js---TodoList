@@ -3,46 +3,47 @@ body{
   color: white;
   overflow: hidden;
 }
-/* login */
-register-container, .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.register-form, .login-form {
+/* Login and Register Forms */
+.form-wrapper {
   background: #353434;
   padding: 2%;
-  width: 300px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
   box-shadow: 0px 5px 7px rgb(78, 78, 78);
-  border-radius: 5px;
 }
 
-.register-input-item, .login-input-item {
+.login-form, .register-form {
+  width: 300px;
+}
+
+.form-input-item {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
 
-.register-input-item label, .login-input-item label {
+.form-input-item label {
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.register-input-item input, .login-input-item input {
+.form-input-item input {
   padding: 8px;
   border: none;
   width: 100%;
   border-radius: 2px;
 }
 
-.register-input-item input:focus, .login-input-item input:focus {
+.form-input-item input:focus {
   outline: 2px solid rgb(0, 230, 122);
 }
 
+
+
 /* Todo */
-h1{
+h1, h2{
   text-align: center;
 }
 

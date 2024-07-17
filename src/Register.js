@@ -6,11 +6,11 @@ function Register() {
     const [password, setPassword] = useState("");
 
     return (
-        <div className="register-container" style={{ marginTop: "10vh" }}>
+        <div className="form-wrapper">
             <form className="register-form">
                 <h2>Create your account</h2>
                 <p>Welcome</p>
-                <div className="register-input-item">
+                <div className="form-input-item">
                     <label htmlFor="email" className="form-label">Email address :</label>
                     <input 
                         onChange={e => setEmail(e.target.value)} 
@@ -19,7 +19,7 @@ function Register() {
                         id="email" 
                     />
                 </div>
-                <div className="register-input-item">
+                <div className="form-input-item">
                     <label htmlFor="password" className="form-label">Password :</label>
                     <input 
                         onChange={e => setPassword(e.target.value)} 
@@ -36,6 +36,7 @@ function Register() {
 }
 
 export default Register;
+
 
 
 // import React, { useState } from 'react'

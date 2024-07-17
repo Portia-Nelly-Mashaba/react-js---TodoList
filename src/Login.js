@@ -13,15 +13,15 @@ function Login() {
     }
 
     return (
-        <div className='login-container' style={{ marginTop: '10vh' }}>
+        <div className='form-wrapper'>
             <form className='login-form'>
                 <h2>Login to your account</h2>
                 <p>Welcome back!</p>
-                <div className='login-input-item'>
+                <div className='form-input-item'>
                     <label htmlFor='email'>Email address :</label>
                     <input onChange={e => setEmail(e.target.value)} type='email' id='email' />
                 </div>
-                <div className='login-input-item'>
+                <div className='form-input-item'>
                     <label htmlFor='password'>Password :</label>
                     <input onChange={e => setPassword(e.target.value)} type='password' id='password' />
                 </div>
@@ -32,6 +32,7 @@ function Login() {
 }
 
 export default Login;
+
 
 
 // import React, { useState } from 'react';
