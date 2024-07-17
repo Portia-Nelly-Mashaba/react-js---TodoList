@@ -3,7 +3,45 @@ body{
   color: white;
   overflow: hidden;
 }
+/* login */
+register-container, .login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.register-form, .login-form {
+  background: #353434;
+  padding: 2%;
+  width: 300px;
+  box-shadow: 0px 5px 7px rgb(78, 78, 78);
+  border-radius: 5px;
+}
+
+.register-input-item, .login-input-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.register-input-item label, .login-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.register-input-item input, .login-input-item input {
+  padding: 8px;
+  border: none;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.register-input-item input:focus, .login-input-item input:focus {
+  outline: 2px solid rgb(0, 230, 122);
+}
+
+/* Todo */
 h1{
   text-align: center;
 }
@@ -71,7 +109,7 @@ h1{
   border-radius: 2px;
   margin-top: 25px;
   padding: 10px;
-  width: 60px;
+  width: fit-content;
   cursor: pointer;
  }
 
@@ -176,30 +214,28 @@ h1{
 }
 
 
-/* Navbar.css */
-.navbar {
-  background-color: #333;
-  padding: 1rem;
-}
-
-.navbar ul {
-  list-style: none;
+.edit_wrapper{
+  background-color: #414040;
+  padding: 10px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
 
-.navbar li {
-  margin: 0 1rem;
+.edit_wrapper input,.edit_wrapper textarea, .priority{
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.edit_wrapper .primaryBtn{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 16px;
+  width:fit-content;
 }
 
-.navbar a.active {
-  border-bottom: 2px solid #fff;
-}
+
 
 
