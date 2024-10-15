@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# To-Do List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **To-Do List App** built using **React.js** and **CSS**, with **LocalStorage** for persisting task data across browser sessions. The app allows users to manage their daily tasks with full CRUD functionality, categorize tasks by priority, and mark tasks as completed. Completed tasks are stored separately and can be viewed in a dedicated tab.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### User Features:
+1. **Home Page (To-Do List):**
+   - Displays a list of tasks, each showing:
+     - Task title.
+     - Description.
+     - Priority rank (color-coded: green for low, yellow for medium, red for high).
+     - Action buttons to edit, delete, or mark the task as completed.
 
-### `npm start`
+2. **Add Task Form:**
+   - Inputs for:
+     - Task title.
+     - Task description.
+     - Priority rank selection (Low, Medium, High).
+   - Button to add the task to the to-do list.
+   - Validation for required fields.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Edit Task Page:**
+   - Pre-filled form with the selected task's details.
+   - Allows the user to update:
+     - Task title.
+     - Description.
+     - Priority rank (Low, Medium, High).
+   - Button to save changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Completed Tasks Page:**
+   - Separate tab where users can view all tasks marked as completed.
+   - Displays completed tasks in the same format as the to-do list.
 
-### `npm test`
+5. **Delete Task Confirmation:**
+   - Confirmation popup when attempting to delete a task.
+   - Button to confirm deletion.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. **Task Priority Color Classification:**
+   - Low priority tasks are displayed with a **green** background.
+   - Medium priority tasks are displayed with a **yellow** background.
+   - High priority tasks are displayed with a **red** background.
 
-### `npm run build`
+7. **LocalStorage Integration:**
+   - All tasks (to-do and completed) are stored in the browser's LocalStorage.
+   - Tasks persist even after refreshing the browser or reopening the app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Navigation Bar:
+- **Links:**
+  - To-Do List (Displays the list of tasks to complete).
+  - Completed Tasks (Displays the list of completed tasks).
+  - Add Task (Form to add a new task).
+  - Reset (Clears all tasks).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technology Stack
+- **Frontend:** React.js
+- **Styling:** CSS
+- **Data Persistence:** LocalStorage (for storing tasks)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Images
 
-### `npm run eject`
+![To-Do List Screen](src/images/TodoHome.PNG)
+![Edit Task Form](src/images/EditTodo.PNG)
+![Completed Tasks Screen](src/images/ViewTodo.PNG)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run this project locally, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Portia-Nelly-Mashaba/react-js---TodoList
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install the dependencies:
+   ```bash
+   cd react-js---TodoList
+   npm install
+   ```
 
-## Learn More
+3. Start the React development server:
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Open the app in your browser:
+   ```
+   http://localhost:3000
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
